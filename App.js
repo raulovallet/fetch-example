@@ -2,10 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import {registerFetchTask} from './tasks';
+const INTERVAL_TASKS = 10;
+registerFetchTask('task_2', () => {
+  console.log('Rodando em background');
+}, INTERVAL_TASKS);
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Hi hello</Text>
       <StatusBar style="auto" />
     </View>
   );
