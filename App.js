@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import {registerFetchTask} from './tasks';
 const INTERVAL_TASKS = 10;
-registerFetchTask('task_2', () => {
+
+registerFetchTask('task_1', () => {
   console.log('Rodando em background');
 }, INTERVAL_TASKS);
 
